@@ -1,4 +1,4 @@
-/* var to hold values that the computer can pick from */
+// The specific letters that the user typed.
 var computerChoices = [
   "a",
   "b",
@@ -28,36 +28,29 @@ var computerChoices = [
   "z"
 ];
 
-/* var for starting score of game of zero */
-
+// Setting for zero
 var wins = 0;
-
 var losses = 0;
-
 var guessesLeft = 9;
-
 var letterUser = [];
+var eachofLetters = null;
 
-var eachOfLetters = null;
-
-/* make var computerGuess = computerChoices array */
-
+// Sets the computerGuess variable equal to a random choice from the computerChoice array.
 var computerGuess =
   computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-/* make functions */
-
 function countGuessesLeft() {
-  document.querySelector("guessesLeft").innerText=
-    "Guesses Left" + guessesLeft;
+  document.querySelector("#guessesLeft").innerText =
+    "Guesses Left: " + guessesLeft;
 }
 
-/* functions for when users takes a guess */
 function farUserGuesses() {
-  document.querySelector("#letter").innerText = "Your Guesses so far: " + letterUser.join(" ");
+  document.querySelector("#letter").innerText =
+    "Your Guesses so far: " + letterUser.join(" ");
 }
+
 countGuessesLeft();
-/* function to reset */
+// restarts the count
 var restart = function() {
   guessesLeft = 9;
   letterUser = [];
