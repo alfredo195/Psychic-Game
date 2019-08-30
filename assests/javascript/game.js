@@ -33,7 +33,6 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var letterUser = [];
-var eachofLetters = null;
 
 // Sets the computerGuess variable equal to a random choice from the computerChoice array.
 var computerGuess =
@@ -54,6 +53,7 @@ countGuessesLeft();
 var restart = function() {
   guessesLeft = 9;
   letterUser = [];
+  
   var computerGuess =
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
 };
@@ -68,13 +68,14 @@ document.onkeyup = function(event) {
   countGuessesLeft();
   farUserGuesses();
 
+/* if then statments */
   if (userGuess === computerGuess) {
     wins++;
     document.querySelector("#wins").innerText = "Wins: " + wins;
     restart();
   } else if (guessesLeft === 0) {
     losses++;
-    document.querySelector("#lose").innerText = "Loses: " + losses;
+    document.querySelector("#losses").innerText = "losses: " + losses;
     restart();
   }
 };

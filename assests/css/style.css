@@ -1,3 +1,5 @@
 body{
-    background-image: url("assests\images\psych.jpg")
+    
+    background-image: url("../images/psych.jpg");
+
 }
