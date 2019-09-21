@@ -1,5 +1,10 @@
 body{
+    background-image: url('../images/psych.jpg');
+    background-size: cover;
     
-    background-image: url("../images/psych.jpg");
-
+    
+    
+    height: 100vh;
+    padding:0;
+    margin:0;
 }
